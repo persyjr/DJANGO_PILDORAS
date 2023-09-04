@@ -1,9 +1,16 @@
 from django.http import HttpResponse
 import datetime
+from django.template import Template, Context
 
 def saludo(request): # primera vista 
     print("saludo(request)")
-    return HttpResponse("hola primera vista")
+    docExterno=open('../Projecto1/Projecto1/plantillas/template.html')#abro documento
+    plt =Template(docExterno.read())#leo documento y lo convierto en un objeto template
+    docExterno.close() #cierro comunicacion para ahorrar recursos
+    ctx=Context() #creo objeto contecto
+    documento=plt.render(ctx)
+
+    return HttpResponse(documento)
 
 def despedida(request): # segunda vista 
     print("despedida(request)")
