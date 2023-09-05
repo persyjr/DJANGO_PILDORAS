@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>template</title>
+    <title>Prueba</title>
 </head>
 <body>
-    {% include "./superior/navbar.html"%}
-    <h2>SALUDO </h2>
-    <p> ESTE ES EL PRIMER TEMPLATE</p>
+    <h2>TEMPLATE DE PRUEBA </h2>
+    <p> ESTE ES EL TEMPLATE DE PRUEBA</p>
     <p> Accediendo al Contexto[nombreUsuario] : {{nombreUsuario.upper}} se uso metodo upper</p>
     <p> Accediendo al Contexto[apellidoUsuario] : {{apellidoUsuario}}</p>
     <p> Accediendo al Contexto[fecha_actual] : {{fecha_actual}}</p>
@@ -19,6 +18,5 @@
         <li>{{categoria}}</li>
         {% endfor %}
     </ul>
-    
 </body>
 </html>
